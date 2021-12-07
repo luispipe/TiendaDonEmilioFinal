@@ -5,16 +5,13 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import androidx.fragment.app.FragmentActivity
 
-//PASO 6 CREACION DB
 class DBHelper(context: FragmentActivity?) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
-    companion object{
+    companion object {
         private val DATABASE_VERSION = 1
         private val DATABASE_NAME = "info"
     }
-
-    //PASO 6.1 CREACION de una tabla
 
     override fun onCreate(db: SQLiteDatabase?) {
         db!!.execSQL("CREATE TABLE " + Tables.information.TABLE_NAME +  " (" +
@@ -24,13 +21,13 @@ class DBHelper(context: FragmentActivity?) :
                 Tables.information._correo + " TEXT NOT NULL, " +
                 Tables.information._telefono + " TEXT NOT NULL)")
     }
-    //PASO 6 Configuracion de versiones de la BD
+
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         val orderErase = "DROP TABLE IF EXISTS " + Tables.information.TABLE_NAME
         db!!.execSQL(orderErase)
         onCreate(db)
     }
-    //PASO 7 añadir valores a la tabla
+
     fun insert(name:String, address:String, email:String, phone:String){
         val data = ContentValues()
         data.put(Tables.information._nombre,name)
@@ -42,7 +39,7 @@ class DBHelper(context: FragmentActivity?) :
         db.insert(Tables.information.TABLE_NAME, null, data)
         db.close()
     }
-    //Paso 13 modificar esos valores ingresados en la tabla de la base de datos
+
     fun edit(name:String, address:String, email:String, phone:String){
         val num = 1
         val args = arrayOf(num.toString())
@@ -57,4 +54,9 @@ class DBHelper(context: FragmentActivity?) :
         db.update(Tables.information.TABLE_NAME, data," _id = ?", args)
         db.close()
     }
+
+
+
+
+
 }

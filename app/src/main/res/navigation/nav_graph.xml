@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navHomeFragment"
-        android:name="com.misiontic2022.tiendadonemilio.view.ui.fragments.HomeFragment"
+        android:name="com.example.tiendadonemiliop67.view.ui.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/navOrderFragment"
-        android:name="com.misiontic2022.tiendadonemilio.view.ui.fragments.OrderFragment"
+        android:name="com.example.tiendadonemiliop67.view.ui.fragments.OrderFragment"
         android:label="fragment_order"
         tools:layout="@layout/fragment_order" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/navCommentsFragment"
-        android:name="com.misiontic2022.tiendadonemilio.view.ui.fragments.ComentsFragment"
+        android:name="com.example.tiendadonemiliop67.view.ui.fragments.ComentsFragment"
         android:label="fragment_coments"
         tools:layout="@layout/fragment_coments" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/navAdminFragment"
-        android:name="com.misiontic2022.tiendadonemilio.view.ui.fragments.AdminFragment"
+        android:name="com.example.tiendadonemiliop67.view.ui.fragments.AdminFragment"
         android:label="fragment_admin"
         tools:layout="@layout/fragment_admin" >
         <action
@@ -50,21 +50,19 @@
 
     <dialog
         android:id="@+id/orderDetailFragmentDialog"
-        android:name="com.misiontic2022.tiendadonemilio.view.ui.fragments.OrderDetailDialogFragment"
+        android:name="com.example.tiendadonemiliop67.view.ui.fragments.OrderDetailDialogFragment"
         android:label="OrderDetailFragmentDialog"
         tools:layout="@layout/fragment_order_detail_dialog"/>
     <dialog
         android:id="@+id/commentsDetailFragmentDialog"
-        android:name="com.misiontic2022.tiendadonemilio.view.ui.fragments.CommentsDetailDialogFragment"
+        android:name="com.example.tiendadonemiliop67.view.ui.fragments.ComentsDetailDialogFragment"
         android:label="CommentsDetailFragmentDialog"
-        tools:layout="@layout/fragment_comments_detail_dialog"/>
+        tools:layout="@layout/fragment_coments_detail_dialog"/>
     <fragment
         android:id="@+id/adminDetailFragmentDialog"
-        android:name="com.misiontic2022.tiendadonemilio.view.ui.fragments.AdminDetailDialogFragment"
+        android:name="com.example.tiendadonemiliop67.view.ui.fragments.AdminDetailDialogFragment"
         android:label="AdminDetailFragmentDialog"
-        tools:layout="@layout/fragment_admin_detail_dialog">
-
-    </fragment>
+        tools:layout="@layout/fragment_admin_detail_dialog"/>
 
 
 </navigation>

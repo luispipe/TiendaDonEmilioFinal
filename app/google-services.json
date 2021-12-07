@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "894039274817",
-    "project_id": "tiendadonemilio",
-    "storage_bucket": "tiendadonemilio.appspot.com"
+    "project_number": "934170027296",
+    "project_id": "tiendadonemilio-18567",
+    "storage_bucket": "tiendadonemilio-18567.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:894039274817:android:f2428eea8b8e4339dbddc0",
+        "mobilesdk_app_id": "1:934170027296:android:69f357e8fb3423032ae345",
         "android_client_info": {
-          "package_name": "com.misiontic2022.tiendadonemilio"
+          "package_name": "com.example.tiendadonemiliop67"
         }
       },
       "oauth_client": [
         {
-          "client_id": "894039274817-957du5u8ggah99bntbftqqgj57g736m4.apps.googleusercontent.com",
+          "client_id": "934170027296-kn5jad3e33vvs7orug9oi34jpt0kkapb.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.misiontic2022.tiendadonemilio",
-            "certificate_hash": "adc4050c387eee1c7b42cf6fb7f8c1f588c256b5"
+            "package_name": "com.example.tiendadonemiliop67",
+            "certificate_hash": "6603f98bc9a09f5cdff95a902b98aed35c8faa51"
           }
         },
         {
-          "client_id": "894039274817-652mseqaujqnrbo5okl5rp0ablf6kqjc.apps.googleusercontent.com",
+          "client_id": "934170027296-glbi4b8gjgnfvu82jpccoo6g8dg40oe4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDKwTsw46RBGfUy5rTQx_1PJpO0Ljya-kM"
+          "current_key": "AIzaSyDkD7BPkvVY7lBcUALkHzHtYUeCDU6BJRE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "894039274817-652mseqaujqnrbo5okl5rp0ablf6kqjc.apps.googleusercontent.com",
+              "client_id": "934170027296-glbi4b8gjgnfvu82jpccoo6g8dg40oe4.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
