@@ -4,12 +4,11 @@ import Data.DBHelper
 import Data.Tables
 import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.example.tiendadonemiliop67.R
+import androidx.fragment.app.Fragment
 import com.example.tiendadonemiliop67.databinding.FragmentAdminDetailDialogBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -57,13 +56,16 @@ class AdminDetailDialogFragment : Fragment() {
         //Paso 10. Configurando el almacenamiento de valores
         binding.btSaveAdmin.setOnClickListener {
 
+            val db: SQLiteDatabase = informacionDBHelper.readableDatabase
+
+
             if (binding.etNameAdmin.text.isNotBlank() &&
                 binding.etAddressAdmin.text.isNotBlank() &&
                 binding.etMailAdmin.text.isNotBlank() &&
                 binding.etPhoneAdmin.text.isNotBlank()
             ) {
 
-                informacionDBHelper.edit(
+                informacionDBHelper.insert(
                     binding.etNameAdmin.text.toString(),
                     binding.etAddressAdmin.text.toString(),
                     binding.etMailAdmin.text.toString(),
@@ -73,12 +75,13 @@ class AdminDetailDialogFragment : Fragment() {
                 //Paso 11. Limpiando los campos editables
                 Toast.makeText(activity, "Se guardaron los datos", Toast.LENGTH_LONG).show()
 
+
+
                 binding.etNameAdmin.text.clear()
                 binding.etAddressAdmin.text.clear()
                 binding.etMailAdmin.text.clear()
                 binding.etPhoneAdmin.text.clear()
 
-                val db: SQLiteDatabase = informacionDBHelper.readableDatabase
                 val cursor = db.rawQuery("SELECT * FROM " + Tables.information.TABLE_NAME, null)
                 if (cursor == null) {
                     Toast.makeText(activity, "Base de datos vacia", Toast.LENGTH_LONG).show()
@@ -99,7 +102,6 @@ class AdminDetailDialogFragment : Fragment() {
 
             //Paso 12. Actualizar los datos
 
-            val db : SQLiteDatabase = informacionDBHelper.readableDatabase
             val cursor = db.rawQuery("SELECT * FROM " + Tables.information.TABLE_NAME, null )
 
             if(cursor.moveToFirst()){

@@ -4,16 +4,15 @@ import Data.DBHelper
 import Data.Tables
 import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.tiendadonemiliop67.R
 import com.example.tiendadonemiliop67.databinding.FragmentAdminBinding
-import java.io.PrintStream
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -69,6 +68,7 @@ class AdminFragment : Fragment() {
             Toast.makeText(activity,"Base de datos vacia", Toast.LENGTH_LONG).show()
         }
         if(cursor.moveToFirst()){
+            Toast.makeText(activity, "LLego hasta acá", Toast.LENGTH_SHORT).show()
             do{
                 binding.tvNameAdmin.setText("Nombre: " + cursor.getString(1).toString() )
                 binding.tvAddressAdmin.setText("Dirección: " + cursor.getString(2).toString() )

@@ -20,6 +20,7 @@ class ProductsAdapter(val productsListener: ProductsListener) : RecyclerView.Ada
 
     override fun onBindViewHolder(holder: ProductsAdapter.ViewHolder, position: Int) {
         val products = listProducts[position]
+
         holder.tvNameProduct.text = products.name
         holder.tvPriceProduct.text = products.price
         Picasso.get().load(products.url).into(holder.ivItemProduct)
